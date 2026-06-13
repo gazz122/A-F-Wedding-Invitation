@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>A &amp; F Wedding - Digital Invitation</title>
+<link rel="icon" type="image/png" sizes="192x192" href="images/logo.png">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#400011",
+                    "on-primary-container": "#f18795",
+                    "tertiary-container": "#3e3b36",
+                    "surface": "#fcf9f8",
+                    "on-tertiary-fixed": "#1e1b17",
+                    "surface-bright": "#fcf9f8",
+                    "inverse-surface": "#303030",
+                    "secondary-container": "#fed65b",
+                    "surface-container-high": "#eae7e7",
+                    "surface-container": "#f0eded",
+                    "surface-container-low": "#f6f3f2",
+                    "secondary-fixed": "#ffe088",
+                    "on-background": "#1b1c1c",
+                    "outline-variant": "#dac0c2",
+                    "primary": "#50071b",
+                    "surface-variant": "#e4e2e1",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-container": "#aaa59e",
+                    "on-tertiary-fixed-variant": "#4a4641",
+                    "tertiary-fixed-dim": "#ccc6be",
+                    "secondary-fixed-dim": "#e9c349",
+                    "primary-fixed-dim": "#ffb2bb",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#735c00",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed": "#241a00",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f3f0f0",
+                    "outline": "#877274",
+                    "tertiary-fixed": "#e8e1da",
+                    "on-surface": "#1b1c1c",
+                    "tertiary": "#282521",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#ffd9dc",
+                    "on-secondary-container": "#745c00",
+                    "error": "#ba1a1a",
+                    "background": "#fcf9f8",
+                    "surface-container-highest": "#e4e2e1",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#7c2a3a",
+                    "on-surface-variant": "#544244",
+                    "inverse-primary": "#ffb2bb",
+                    "on-secondary-fixed-variant": "#574500",
+                    "surface-tint": "#9a4150",
+                    "surface-dim": "#dcd9d9",
+                    "on-error": "#ffffff",
+                    "primary-container": "#6d1f2f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-padding-desktop": "80px",
+                    "section-gap": "64px",
+                    "base": "8px",
+                    "gutter": "16px",
+                    "container-padding-mobile": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "label-lg": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-invitation {
+            background-image: linear-gradient(to bottom, rgba(80, 7, 27, 0.4), rgba(80, 7, 27, 0.8)), url('images/opening_bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-card {
+            background: rgba(252, 249, 248, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(233, 195, 73, 0.4);
+        }
+        @keyframes gold-pulse {
+            0%, 100% { box-shadow: 0 0 0px rgba(233, 195, 73, 0); }
+            50% { box-shadow: 0 0 25px rgba(233, 195, 73, 0.6); }
+        }
+        .animate-gold-glow {
+            animation: gold-pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .reveal-up {
+            animation: revealUp 1.2s ease-out forwards;
+        }
+        @keyframes revealUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-hidden">
+    <audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+    </audio>
+<!-- Hero Content Canvas -->
+<main class="relative h-screen w-full flex items-center justify-center bg-invitation overflow-hidden">
+<!-- Animated Corner Borders (Cultural Luxury Accents) -->
+<div class="absolute top-gutter left-gutter w-24 h-24 border-t-2 border-l-2 border-secondary-fixed-dim opacity-50 pointer-events-none"></div>
+<div class="absolute bottom-gutter right-gutter w-24 h-24 border-b-2 border-r-2 border-secondary-fixed-dim opacity-50 pointer-events-none"></div>
+<!-- Main Invitation Container -->
+<div class="relative z-10 w-full max-w-[600px] px-container-padding-mobile flex flex-col items-center text-center">
+<!-- Branding/Identity -->
+<div class="reveal-up" style="animation-delay: 0.2s;">
+<p class="font-label-lg text-label-lg text-secondary-fixed-dim tracking-widest uppercase mb-4">The Wedding of</p>
+<h1 class="font-display-lg text-display-lg text-surface-container-lowest italic mb-2">Ara &amp; Fathur</h1>
+<!-- Divider -->
+<div class="flex items-center justify-center gap-4 my-6">
+<div class="h-[1px] w-12 bg-secondary-fixed-dim opacity-40"></div>
+<span class="material-symbols-outlined text-secondary-fixed-dim" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+<div class="h-[1px] w-12 bg-secondary-fixed-dim opacity-40"></div>
+</div>
+</div>
+<!-- Guest Card (Glassmorphism) -->
+<div class="glass-card rounded-xl p-8 w-full max-w-sm mb-section-gap reveal-up shadow-2xl" style="animation-delay: 0.6s;">
+<p class="font-label-lg text-label-lg text-on-surface-variant mb-3 uppercase tracking-wider">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+<h2 id="guest-name"
+    class="font-headline-md text-headline-md text-primary font-bold mb-6">
+    guest-name
+</h2>
+<button class="group relative w-full inline-flex items-center justify-center px-gutter py-4 font-label-lg text-label-lg text-on-primary bg-primary rounded-lg transition-all duration-300 transform hover:scale-[1.02] active:scale-95 animate-gold-glow" onclick="openInvitation()">
+<span class="relative z-10">Buka Undangan</span>
+<span class="ml-2 material-symbols-outlined text-[18px]">mail</span>
+</button>
+</div>
+<!-- Date/Venue Sneak Peek -->
+<div class="reveal-up flex flex-col items-center text-surface-container-lowest" style="animation-delay: 0.8s;">
+<p class="font-headline-md text-headline-md mb-2 italic">Save the Date</p>
+<div class="flex items-center gap-gutter">
+<div class="text-right">
+<span class="font-headline-lg text-headline-lg-mobile block">03</span>
+</div>
+<div class="w-[1px] h-10 bg-secondary-fixed-dim"></div>
+<div class="text-left">
+<span class="font-label-lg text-label-lg block uppercase tracking-tighter">July</span>
+<span class="font-label-lg text-label-lg block uppercase tracking-tighter">2026</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Background Overlay Pattern (Subtle batik shimmer) -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 50% 50%, #fed65b 1px, transparent 1px); background-size: 40px 40px;"></div>
+</main>
+<!-- Top App Bar (From Shared Components) -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-gutter py-base bg-surface/80 dark:bg-surface-container/80 backdrop-blur-xl border-b border-secondary-container/30 transition-all duration-300 ease-in-out opacity-0" id="top-bar">
+<div class="flex items-center gap-gutter">
+<span class="material-symbols-outlined text-primary">menu</span>
+</div>
+<div class="font-headline-md text-headline-md text-primary italic">A &amp; F Wedding</div>
+<div class="flex items-center gap-gutter">
+<span class="material-symbols-outlined text-primary">music_note</span>
+</div>
+</header>
+<!-- Content Hidden Until Clicked (Simplified logic for the landing screen) -->
+<script>
+let musicPlaying = false;
+const bgMusic = document.getElementById('bgMusic');
+
+function toggleMusic() {
+    const icon = document.getElementById('music-icon');
+
+    if (musicPlaying) {
+        bgMusic.pause();
+        musicPlaying = false;
+
+        icon.innerText = 'music_off';
+        icon.classList.remove('animate-pulse');
+    } else {
+        bgMusic.play();
+        musicPlaying = true;
+
+        icon.innerText = 'music_note';
+        icon.classList.add('animate-pulse');
+    }
+}
+
+function openInvitation() {
+
+    sessionStorage.setItem('musicPlaying', 'true');
+    sessionStorage.setItem('musicTime', '0');
+
+    window.location.href =
+        'home.html' + window.location.search;
+}
+
+// Auto play setelah user pertama kali klik layar
+document.addEventListener('click', function startMusic() {
+    if (!musicPlaying) {
+        bgMusic.play().then(() => {
+            musicPlaying = true;
+
+            const icon = document.getElementById('music-icon');
+            if (icon) {
+                icon.innerText = 'music_note';
+                icon.classList.add('animate-pulse');
+            }
+        }).catch(() => {});
+    }
+}, { once: true });
+
+// Ambil nama tamu dari URL
+window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const guest = params.get('to');
+
+    const guestDisplay = document.getElementById('guest-name');
+
+    if (guest && guestDisplay) {
+        guestDisplay.textContent = decodeURIComponent(guest);
+    }
+});
+
+</script>
+</body>
+</html>

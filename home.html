@@ -1,0 +1,480 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>A &amp; F Wedding Invitation</title>
+<link rel="icon" type="image/png" sizes="192x192" href="images/logo.png">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#400011",
+                    "on-primary-container": "#f18795",
+                    "tertiary-container": "#3e3b36",
+                    "surface": "#fcf9f8",
+                    "on-tertiary-fixed": "#1e1b17",
+                    "surface-bright": "#fcf9f8",
+                    "inverse-surface": "#303030",
+                    "secondary-container": "#fed65b",
+                    "surface-container-high": "#eae7e7",
+                    "surface-container": "#f0eded",
+                    "surface-container-low": "#f6f3f2",
+                    "secondary-fixed": "#ffe088",
+                    "on-background": "#1b1c1c",
+                    "outline-variant": "#dac0c2",
+                    "primary": "#50071b",
+                    "surface-variant": "#e4e2e1",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-container": "#aaa59e",
+                    "on-tertiary-fixed-variant": "#4a4641",
+                    "tertiary-fixed-dim": "#ccc6be",
+                    "secondary-fixed-dim": "#e9c349",
+                    "primary-fixed-dim": "#ffb2bb",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#735c00",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed": "#241a00",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f3f0f0",
+                    "outline": "#877274",
+                    "tertiary-fixed": "#e8e1da",
+                    "on-surface": "#1b1c1c",
+                    "tertiary": "#282521",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#ffd9dc",
+                    "on-secondary-container": "#745c00",
+                    "error": "#ba1a1a",
+                    "background": "#fcf9f8",
+                    "surface-container-highest": "#e4e2e1",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#7c2a3a",
+                    "on-surface-variant": "#544244",
+                    "inverse-primary": "#ffb2bb",
+                    "on-secondary-fixed-variant": "#574500",
+                    "surface-tint": "#9a4150",
+                    "surface-dim": "#dcd9d9",
+                    "on-error": "#ffffff",
+                    "primary-container": "#6d1f2f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-padding-desktop": "80px",
+                    "section-gap": "64px",
+                    "base": "8px",
+                    "gutter": "16px",
+                    "container-padding-mobile": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "label-lg": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+        .glass-card {
+    background: rgba(252, 249, 248, 0.45);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 32px rgba(80,7,27,0.08);
+}
+        .bg-pattern {
+            background-color: #fcf9f8;
+            background-image: radial-gradient(#50071b 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.05;
+        }
+        .ornament-border {
+            border-image-source: linear-gradient(to bottom, #735c00, #fed65b, #735c00);
+            border-image-slice: 1;
+        }
+
+        @keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin-slow {
+    animation: spin-slow 4s linear infinite;
+}
+
+    </style>
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+    <!-- Top AppBar (From JSON) -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-gutter py-base bg-surface/40 backdrop-blur-xl border-b border-secondary-container/30 transition-all duration-300 ease-in-out">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="menu"><br></span>
+</div>
+<h1 class="font-headline-md text-headline-md text-primary italic">A &amp; F Wedding</h1>
+<div class="flex items-center gap-2">
+</div>
+</header>
+<main class="min-h-[884px] pt-16 pb-24 overflow-x-hidden relative" data-stitch-vh="min-h-[884px]===min-h-screen">
+<!-- Background Decor -->
+<div class="fixed inset-0 bg-pattern pointer-events-none"></div>
+<!-- Hero Section -->
+<section class="relative w-full px-container-padding-mobile md:px-container-padding-desktop py-base flex flex-col items-center">
+<!-- Main Hero Content -->
+<div class="max-w-[600px] w-full mx-auto animate-fade-in text-center">
+<!-- Couple Image Wrapper -->
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden mb-gutter shadow-2xl ring-1 ring-secondary/20">
+<img alt="Fathur &amp; Ara Wedding" class="w-full h-full object-cover" src="images/cover.jpeg" style="transform: translateY(0px);">
+<!-- Overlay Gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-primary/20 to-transparent"></div>
+<!-- Floating Ethnic Ornament (Top Right) -->
+<div class="absolute top-4 right-4 text-secondary-fixed-dim drop-shadow-lg">
+</div>
+</div>
+
+<div class="text-center max-w-4xl mx-auto px-8 mb-16 reveal">
+    <div class="w-16 h-px bg-secondary mx-auto mb-6"></div>
+
+    <p>وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةًۗ اِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ</p>
+
+    <p class="font-headline-md text-primary italic leading-relaxed">
+        "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
+        pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung
+        dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa
+        kasih dan sayang."
+    </p>
+
+    <p class="mt-4 text-secondary tracking-[0.25em] uppercase text-sm">
+        QS. Ar-Rum 21
+    </p>
+
+    <div class="w-16 h-px bg-secondary mx-auto mt-6"></div>
+</div>
+
+<!-- Names & Intro -->
+<div class="flex flex-col md:flex-row items-start justify-center gap-10 mt-8">
+
+    <!-- Pria -->
+   <div class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-gutter">
+
+    <div class="text-center">
+        <p class="font-display-lg text-display-lg text-primary">
+            Fathur Rahman S.Psi
+        </p>
+        <p class="text-sm text-on-surface-variant mt-1">
+            Putra Dari (Rahimahullah) Bpk. Azwir<br>
+            &amp; Ibu Roza Alfitri (Rosa)
+        </p>
+    </div>
+
+    <span class="font-headline-md text-headline-md text-secondary italic">
+        &
+    </span>
+
+    <div class="text-center">
+        <p class="font-display-lg text-display-lg text-primary">
+            Fatimah Azahra
+        </p>
+        <p class="text-sm text-on-surface-variant mt-1">
+            Putri Dari Bpk. Wardani<br>
+            &amp; Ibu Rohimah
+        </p>
+    </div>
+
+</div>
+
+</div>
+<!-- Countdown Timer Section -->
+<div class="mt-16 glass-card p-6 rounded-xl shadow-lg border border-secondary-fixed/30">
+    <div class="grid grid-cols-4 text-center">
+
+        <div class="flex flex-col items-center border-r border-secondary-fixed/30">
+    <span class="font-headline-lg text-headline-lg text-primary" id="days">24</span>
+    <span class="font-label-lg text-label-lg text-secondary uppercase text-[10px]">
+        Days
+    </span>
+</div>
+
+<div class="flex flex-col items-center border-r border-secondary-fixed/30">
+    <span class="font-headline-lg text-headline-lg text-primary" id="hours">00</span>
+    <span class="font-label-lg text-label-lg text-secondary uppercase text-[10px]">
+        Hours
+    </span>
+</div>
+
+<div class="flex flex-col items-center border-r border-secondary-fixed/30">
+    <span class="font-headline-lg text-headline-lg text-primary" id="minutes">00</span>
+    <span class="font-label-lg text-label-lg text-secondary uppercase text-[10px]">
+        Min
+    </span>
+</div>
+
+<div class="flex flex-col items-center">
+    <span class="font-headline-lg text-headline-lg text-primary" id="seconds">00</span>
+    <span class="font-label-lg text-label-lg text-secondary uppercase text-[10px]">
+        Sec
+    </span>
+</div>
+</div>
+
+<div class="mt-8 text-center">
+    <p class="text-sm uppercase tracking-[0.3em] text-secondary">
+        Friday, 03 July 2026
+    </p>
+    <h3 class="mt-3 text-2xl font-serif text-primary">
+        The Day We Become One
+    </h3>
+</div>
+<!-- Aesthetic Scroll Indicator -->
+<div class="flex flex-col items-center mt-gutter animate-bounce opacity-40">
+</div>
+</main>
+<!-- Footer (From JSON) -->
+<footer class="w-full py-section-gap px-container-padding-mobile flex flex-col items-center text-center gap-gutter bg-primary text-on-primary border-t border-secondary-fixed/20 mb-20">
+<h2 class="font-headline-md text-headline-md text-secondary-container italic">A &amp; F</h2>
+<p class="font-body-md text-body-md text-on-primary/80"># FARever. Crafted with Love.</p>
+<div class="flex gap-gutter">
+</div>
+</footer>
+<!-- Bottom NavBar (From JSON) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-surface/50 backdrop-blur-xl border-t border-secondary-container/30 shadow-lg shadow-secondary/10 rounded-t-full">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center text-primary font-bold scale-110 transition-transform duration-200" href="">
+<span class="material-symbols-outlined" data-icon="home_heart" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-lg text-[10px]">Home</span>
+</a>
+<!-- Event -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:opacity-100 transition-transform duration-200 active:scale-95" href="event.html">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-lg text-[10px]">Event</span>
+</a>
+<!-- Gallery -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:opacity-100 transition-transform duration-200 active:scale-95" href="story.html">
+<span class="material-symbols-outlined" data-icon="photo_library">photo_library</span>
+<span class="font-label-lg text-[10px]">Gallery</span>
+</a>
+<!-- RSVP -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:opacity-100 transition-transform duration-200 active:scale-95" href="story.html">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-label-lg text-[10px]">RSVP</span>
+</a>
+</nav>
+<!-- Music Player Toggle -->
+<div class="fixed bottom-24 right-4 z-40">
+<button id="musicToggle"
+class="w-12 h-12 bg-secondary text-on-secondary rounded-full flex items-center justify-center shadow-lg hover:bg-primary transition-colors glass-card ring-2 ring-secondary-fixed"
+onclick="handleMusicToggle()">
+
+<span id="musicIcon"
+      class="material-symbols-outlined">
+    music_note
+</span>
+
+</button>
+</div>
+<script>
+const bgMusic = document.getElementById('bgMusic');
+const musicIcon = document.getElementById('musicIcon');
+
+let wasPlayingBeforeHidden = false;
+
+document.addEventListener('visibilitychange', () => {
+
+    if (document.hidden) {
+
+        // Simpan status sebelum tab ditinggal
+        wasPlayingBeforeHidden = !bgMusic.paused;
+
+        if (wasPlayingBeforeHidden) {
+            bgMusic.pause();
+        }
+
+    } else {
+
+        // Kalau sebelumnya memang lagi muter, lanjut lagi
+        if (wasPlayingBeforeHidden) {
+
+            bgMusic.play().catch(() => {});
+
+        }
+
+    }
+
+});
+
+if (document.hidden) {
+
+        wasPlayingBeforeHidden = !bgMusic.paused;
+
+        if (wasPlayingBeforeHidden) {
+
+            bgMusic.pause();
+
+            if (musicIcon) {
+                musicIcon.classList.remove('animate-spin-slow');
+            }
+
+        }
+
+    } else {
+
+        if (wasPlayingBeforeHidden) {
+
+            bgMusic.play().catch(() => {});
+
+            if (musicIcon) {
+                musicIcon.classList.add('animate-spin-slow');
+            }
+
+        }
+
+    }
+
+window.addEventListener('DOMContentLoaded', () => {
+
+    const savedTime =
+        parseFloat(sessionStorage.getItem('musicTime') || '0');
+
+    const isPlaying =
+        sessionStorage.getItem('musicPlaying') === 'true';
+
+    bgMusic.currentTime = savedTime;
+
+    if (isPlaying) {
+
+        bgMusic.play().catch(() => {});
+
+        if (musicIcon) {
+            musicIcon.classList.add('animate-spin-slow');
+        }
+
+    } else {
+
+        if (musicIcon) {
+            musicIcon.classList.remove('animate-spin-slow');
+        }
+
+    }
+
+});
+
+// Simpan posisi lagu
+setInterval(() => {
+
+    if (!bgMusic.paused) {
+
+        sessionStorage.setItem(
+            'musicTime',
+            bgMusic.currentTime
+        );
+
+    }
+
+}, 500);
+
+// Simpan saat pindah halaman
+window.addEventListener('beforeunload', () => {
+
+    sessionStorage.setItem(
+        'musicTime',
+        bgMusic.currentTime
+    );
+
+    sessionStorage.setItem(
+        'musicPlaying',
+        String(!bgMusic.paused)
+    );
+
+});
+
+// Tombol music
+function handleMusicToggle() {
+
+    if (bgMusic.paused) {
+
+        bgMusic.play();
+
+        sessionStorage.setItem(
+            'musicPlaying',
+            'true'
+        );
+
+        if (musicIcon) {
+            musicIcon.classList.add('animate-spin-slow');
+        }
+
+    } else {
+
+        bgMusic.pause();
+
+        sessionStorage.setItem(
+            'musicPlaying',
+            'false'
+        );
+
+        if (musicIcon) {
+            musicIcon.classList.remove('animate-spin-slow');
+        }
+
+    }
+
+}
+
+const targetDate =
+new Date("2026-07-03T15:00:00+07:00").getTime();
+
+setInterval(()=>{
+
+    const now = new Date().getTime();
+
+    const distance = targetDate - now;
+
+    document.getElementById('days').innerHTML =
+    Math.floor(distance/(1000*60*60*24));
+
+    document.getElementById('hours').innerHTML =
+    Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+    document.getElementById('minutes').innerHTML =
+    Math.floor((distance%(1000*60*60))/(1000*60));
+
+    document.getElementById('seconds').innerHTML =
+    Math.floor((distance%(1000*60))/1000);
+
+},1000);
+
+</script>
+</body></html>

@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>A &amp; F Wedding | Love Story, Gallery &amp; RSVP</title>
+<link rel="icon" type="image/png" sizes="192x192" href="images/logo.png">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#400011",
+                    "on-primary-container": "#f18795",
+                    "tertiary-container": "#3e3b36",
+                    "surface": "#fcf9f8",
+                    "on-tertiary-fixed": "#1e1b17",
+                    "surface-bright": "#fcf9f8",
+                    "inverse-surface": "#303030",
+                    "secondary-container": "#fed65b",
+                    "surface-container-high": "#eae7e7",
+                    "surface-container": "#f0eded",
+                    "surface-container-low": "#f6f3f2",
+                    "secondary-fixed": "#ffe088",
+                    "on-background": "#1b1c1c",
+                    "outline-variant": "#dac0c2",
+                    "primary": "#50071b",
+                    "surface-variant": "#e4e2e1",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-container": "#aaa59e",
+                    "on-tertiary-fixed-variant": "#4a4641",
+                    "tertiary-fixed-dim": "#ccc6be",
+                    "secondary-fixed-dim": "#e9c349",
+                    "primary-fixed-dim": "#ffb2bb",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#735c00",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed": "#241a00",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f3f0f0",
+                    "outline": "#877274",
+                    "tertiary-fixed": "#e8e1da",
+                    "on-surface": "#1b1c1c",
+                    "tertiary": "#282521",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#ffd9dc",
+                    "on-secondary-container": "#745c00",
+                    "error": "#ba1a1a",
+                    "background": "#fcf9f8",
+                    "surface-container-highest": "#e4e2e1",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#7c2a3a",
+                    "on-surface-variant": "#544244",
+                    "inverse-primary": "#ffb2bb",
+                    "on-secondary-fixed-variant": "#574500",
+                    "surface-tint": "#9a4150",
+                    "surface-dim": "#dcd9d9",
+                    "on-error": "#ffffff",
+                    "primary-container": "#6d1f2f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-padding-desktop": "80px",
+                    "section-gap": "64px",
+                    "base": "8px",
+                    "gutter": "16px",
+                    "container-padding-mobile": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "label-lg": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .slide-in-left.active, .slide-in-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .glass-card {
+            background: rgba(252, 249, 248, 0.4);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(115, 92, 0, 0.1);
+            transition: background 0.5s ease, backdrop-filter 0.5s ease;
+        }
+        .glass-card.scrolled {
+            background: rgba(252, 249, 248, 0.8);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .ethnic-pattern {
+            background-image: radial-gradient(#735c00 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.05;
+        }
+        .timeline-line {
+            height: 0%;
+            transition: height 0.1s linear;
+        }
+        /* Lightbox */
+        #lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            cursor: zoom-out;
+        }
+        #lightbox.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 0.5rem;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+        #lightbox.active img {
+            transform: scale(1);
+        }
+        .copy-toast {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        .copy-toast.active {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+        body {
+            min-height: max(884px, 100dvh); 
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+<!-- Lightbox Element -->
+<div id="lightbox" onclick="closeLightbox()">
+<img alt="Zoomed view" id="lightbox-img" src=""/>
+</div>
+<!-- Header / TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-gutter py-base bg-surface/0 backdrop-blur-xl border-b border-secondary-container/30">
+<div class="flex items-center gap-2">
+
+</div>
+<h1 class="font-headline-md text-headline-md text-primary italic">A &amp; F Wedding</h1>
+<div class="flex items-center gap-2">
+</div>
+</header>
+<main class="pt-20 pb-24">
+<!-- Love Story Section -->
+<section class="relative px-container-padding-mobile py-section-gap max-w-[600px] mx-auto overflow-hidden" id="story">
+<div class="absolute inset-0 ethnic-pattern -z-10"></div>
+<div class="text-center mb-12 reveal">
+<span class="font-label-lg text-label-lg text-secondary uppercase tracking-widest">Our Journey</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-2">The Love Story</h2>
+<div class="w-16 h-px bg-secondary mx-auto mt-4"></div>
+</div>
+<!-- Timeline -->
+<div class="relative space-y-12 pb-12">
+<!-- Growing Vertical Line -->
+<div class="absolute left-1/2 -translate-x-1/2 h-full w-px bg-outline-variant/30 -z-10">
+<div class="timeline-line w-full bg-primary origin-top" id="timelineLine"></div>
+</div>
+<!-- Story Item 1 -->
+<div class="slide-in-left">
+    <div class="glass-card p-8 rounded-xl relative">
+
+        <div class="w-12 h-[2px] bg-primary mx-auto mb-4"></div>
+
+        <h3 class="font-headline-md text-headline-md text-primary mb-4 text-center">
+            Asmaraloka
+        </h3>
+
+        <p class="text-on-surface-variant text-center leading-relaxed">
+            Sebuah kisah tentang dua hati yang memilih untuk tetap tinggal.
+        </p>
+
+    </div>
+</div>
+<!-- Story Item 2 -->
+<div class="slide-in-left">
+    <div class="glass-card p-8 rounded-xl relative">
+
+        <div class="w-12 h-[2px] bg-primary mx-auto mb-4"></div>
+
+        <h3 class="font-headline-md text-headline-md text-primary mb-4 text-center">
+          Tentang Bertahan
+        </h3>
+
+        <p class="text-on-surface-variant text-center leading-relaxed">
+            Terlalu panjang jika harus diceritakan dari awal... Karena cinta kami bukan tentang bagaimana semuanya dimulai, tentang bagaimana kami bertahan. Kami hanya dua insan biasa, yang ditakdirkan untuk saling menggenggam- melewati badai, menikmati pelangi, hingga sampai di titik ini.
+        </p>
+
+    </div>
+</div>
+<!-- Story Item 3 -->
+<div class="slide-in-left">
+    <div class="glass-card p-8 rounded-xl relative">
+
+        <div class="w-12 h-[2px] bg-primary mx-auto mb-4"></div>
+
+        <h3 class="font-headline-md text-headline-md text-primary mb-4 text-center">
+           Ujian & Bukti
+        </h3>
+
+        <p class="text-on-surface-variant text-center leading-relaxed">
+           Ribuan tangis, Jutaan tawa, Menjadi saksi bagaimana kata "yakin" terus kami ucapkan untuk menguatkan hati yang sempat rapuh. Bukan sekadar janji yang terucap, tapi langkah yang terus bergerak. Bukan hanya kata yang indah, namun pengorbanan yang nyata. Hingga pada suatu hari yang penuh haru, kami mempertemukan dua keluarga, menyatukan doa-doa dalam satu restu.
+        </p>
+
+    </div>
+</div>
+<!-- Story Item 4 -->
+<div class="slide-in-left">
+    <div class="glass-card p-8 rounded-xl relative">
+
+        <div class="w-12 h-[2px] bg-primary mx-auto mb-4"></div>
+
+        <h3 class="font-headline-md text-headline-md text-primary mb-4 text-center">
+            Takdir & Keyakinan
+        </h3>
+
+        <p class="text-on-surface-variant text-center leading-relaxed">
+           Tidak selalu mudah, Tidak selalu setenang yang terlihat, Namun kami memilih percaya- bahwa Sang Maha Cinta tak pernah salah menuliskan takdir. Dengan segala harap dan pasrah, kami menanti hari di mana sebuah janji suci akan terucap, mengikat dua jiwa dalam satu arah.
+        </p>
+
+    </div>
+</div>
+ 
+</section>
+<!-- Gallery Section -->
+<section class="bg-surface-container-low py-section-gap px-container-padding-mobile" id="gallery">
+<div class="max-w-[1200px] mx-auto">
+<div class="text-center mb-12 reveal">
+<span class="font-label-lg text-label-lg text-secondary uppercase tracking-widest">Memories</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-2">Cinematic Gallery</h2>
+<div class="w-16 h-px bg-secondary mx-auto mt-4"></div>
+</div>
+<!-- Bento Style Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 reveal">
+<div class="col-span-2 row-span-2 rounded-xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(this)">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A grand cinematic portrait of a bride and groom in traditional Javanese royal attire, featuring intricate gold embroidery and batik. They are standing in a palace courtyard with soft afternoon light. The aesthetic is extremely high-end and regal, with a deep maroon and gold color palette. The image feels like a high-fashion editorial for a cultural heritage magazine." src="images/gallery 1.png">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<div class="rounded-xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(this)">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A close-up artistic shot of hands intertwined, showing detailed traditional wedding jewelry and intricate henna designs. The background is a soft-focus silk fabric in cream tones. Lighting is soft and directional, emphasizing the texture of the jewelry and the skin. The mood is delicate, luxurious, and romantic." src="images/gallery 3.jpeg">
+</div>
+<div class="rounded-xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(this)">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A candid, joyful moment of the couple laughing together in a modern minimalist cafe with traditional wood accents. The lighting is bright and airy, representing a digital stationery feel. The color palette consists of warm woods, creams, and subtle maroon accents. The vibe is contemporary yet rooted in culture." src="images/gallery 2.png.jpeg">
+</div>
+<div class="rounded-xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(this)">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A candid, joyful moment of the couple laughing together in a modern minimalist cafe with traditional wood accents. The lighting is bright and airy, representing a digital stationery feel. The color palette consists of warm woods, creams, and subtle maroon accents. The vibe is contemporary yet rooted in culture." src="images/gallery 4.jpeg">
+</div>
+<div class="rounded-xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(this)">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A profile shot of the bride looking out a window, her silhouette framed by soft light. She wears a modern veil with ethnic lace patterns. The aesthetic is moody and reflective, with a high-contrast lighting setup that creates a sense of drama and exclusivity. The tones are muted and sophisticated." src="images/gallery 7.jpeg">
+</div>
+<div class="rounded-xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(this)">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A cinematic shot of the groom preparing, adjusting his traditional keris dagger. The focus is on the ornate handle of the weapon and the groom's focused expression. The background is a rich dark wood paneling. The overall feel is one of heritage, strength, and masculine elegance." src="images/gallery 6.jpeg">
+</div>
+<div class="rounded-xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(this)">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A cinematic shot of the groom preparing, adjusting his traditional keris dagger. The focus is on the ornate handle of the weapon and the groom's focused expression. The background is a rich dark wood paneling. The overall feel is one of heritage, strength, and masculine elegance." src="images/gallery 5.jpeg">
+</div>
+<div class="col-span-1 row-span-2 rounded-xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(this)">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A grand cinematic portrait of a bride and groom in traditional Javanese royal attire, featuring intricate gold embroidery and batik. They are standing in a palace courtyard with soft afternoon light. The aesthetic is extremely high-end and regal, with a deep maroon and gold color palette. The image feels like a high-fashion editorial for a cultural heritage magazine." src="images/gallery 8.jpeg">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- RSVP & Wishes Section -->
+<section class="py-section-gap px-container-padding-mobile max-w-[1000px] mx-auto overflow-hidden" id="rsvp">
+  <div class="text-center mb-12 reveal">
+    <span class="font-label-lg text-label-lg text-secondary uppercase tracking-widest">Attendance</span>
+    <h2 class="font-headline-lg text-headline-lg text-primary mt-2">RSVP &amp; Wishes</h2>
+    <div class="w-16 h-px bg-secondary mx-auto mt-4"></div>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-12 items-start">
+
+    <!-- RSVP Form -->
+    <div class="glass-card p-8 rounded-2xl reveal scrolled transition-all duration-700">
+      <h3 class="font-headline-md text-headline-md text-primary mb-6">Will You Join Us?</h3>
+      <form id="rsvp-form" class="space-y-6">
+        <div>
+          <label>Full Name</label>
+          <input name="name" id="rsvp-name" type="text" required
+            class="w-full bg-transparent border-0 border-b border-outline"/>
+        </div>
+        <div>
+          <label>Attendance</label>
+          <select name="attendance" id="rsvp-attendance"
+            class="w-full bg-transparent border-0 border-b border-outline">
+            <option value="Yes, I will attend">Yes, I will attend</option>
+            <option value="Sorry, I cannot attend">Sorry, I cannot attend</option>
+          </select>
+        </div>
+        <div id="guest-wrap">
+          <label>Guest Count</label>
+          <input name="guest_count" id="rsvp-guests" type="number" min="1" value="1"
+            class="w-full bg-transparent border-0 border-b border-outline"/>
+        </div>
+        <div>
+          <label>Wedding Wish <span class="text-xs opacity-50"></span></label>
+          <input name="wish" id="rsvp-wish" type="text"
+            class="w-full bg-transparent border-0 border-b border-outline"
+            placeholder="Tulis ucapan..."/>
+        </div>
+        <button type="submit" id="rsvp-btn"
+          class="w-full bg-primary text-on-primary py-4 rounded-lg">
+          Submit RSVP
+        </button>
+        <p id="rsvp-msg" class="text-center text-sm hidden"></p>
+      </form>
+    </div>
+
+    <!-- Wishes Column -->
+    <div class="reveal delay-100">
+      <h3 class="font-headline-md text-headline-md text-primary mb-6">Wedding Wishes</h3>
+      <div id="wishes-list" class="space-y-4 max-h-[500px] overflow-y-auto pr-2 custom-scrollbar">
+        <div class="text-center py-8 text-sm opacity-50">Loading wishes...</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Digital Gift Section -->
+<section class="py-section-gap px-container-padding-mobile bg-primary text-on-primary overflow-hidden" id="gift">
+<div class="max-w-[600px] mx-auto text-center">
+<div class="reveal">
+<span class="material-symbols-outlined text-4xl text-secondary-fixed mb-4">redeem</span>
+<h2 class="font-headline-lg text-headline-lg mb-4">Digital Gift</h2>
+<p class="mb-10 text-on-primary/80">Your presence is our greatest gift, but if you wish to share a token of love, you may send it through our digital wallets.</p>
+</div>
+<div class="space-y-6">
+<!-- Bank Card -->
+<div class="bg-primary-container p-6 rounded-2xl border border-on-primary/10 reveal relative">
+<div class="copy-toast bg-secondary text-on-secondary px-3 py-1 rounded text-xs font-bold shadow-lg" id="copy-toast-1">COPIED!</div>
+<div class="flex justify-between items-center mb-6">
+<span class="font-bold tracking-widest">BANK BCA Syariah</span>
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div class="text-left mb-6">
+<p class="text-xs text-on-primary/60 uppercase mb-1">Account Number</p>
+<h4 class="text-xl font-mono tracking-wider" id="acc-num">888 088 6943</h4>
+</div>
+<div class="flex justify-between items-end">
+<div class="text-left">
+<p class="text-xs text-on-primary/60 uppercase mb-1">Account Holder</p>
+<p class="font-bold">Fathur Rahman</p>
+</div>
+<button class="bg-secondary-fixed text-on-secondary-fixed px-4 py-2 rounded-lg text-xs font-bold flex items-center gap-2 active:scale-95 transition-transform" onclick="copyToClipboard('1234567890', 'copy-toast-1')">
+<span class="material-symbols-outlined text-sm">content_copy</span> Copy Nomor Rekening
+                            </button>
+</div>
+</div>
+<div class="bg-primary-container p-6 rounded-2xl border border-on-primary/10 reveal relative">
+<div class="copy-toast bg-secondary text-on-secondary px-3 py-1 rounded text-xs font-bold shadow-lg" id="copy-toast-1">COPIED!</div>
+<div class="flex justify-between items-center mb-6">
+<span class="font-bold tracking-widest">BANK MANDIRI</span>
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div class="text-left mb-6">
+<p class="text-xs text-on-primary/60 uppercase mb-1">Account Number</p>
+<h4 class="text-xl font-mono tracking-wider" id="acc-num">166 000 5333 869</h4>
+</div>
+<div class="flex justify-between items-end">
+<div class="text-left">
+<p class="text-xs text-on-primary/60 uppercase mb-1">Account Holder</p>
+<p class="font-bold">Fatimah Azahra</p>
+</div>
+<button class="bg-secondary-fixed text-on-secondary-fixed px-4 py-2 rounded-lg text-xs font-bold flex items-center gap-2 active:scale-95 transition-transform" onclick="copyToClipboard('1234567890', 'copy-toast-1')">
+<span class="material-symbols-outlined text-sm">content_copy</span> Copy Nomor Rekening
+                            </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-container-padding-mobile flex flex-col items-center text-center gap-gutter bg-primary text-on-primary border-t border-secondary-fixed/20 mb-20">
+<h2 class="font-headline-md text-headline-md text-secondary-container italic">A &amp; F</h2>
+<p class="font-body-md text-body-md text-on-primary/80 max-w-[400px] mb-8">"And of His signs is that He created for you from yourselves mates that you may find tranquility in them; and He placed between you affection and mercy."</p>
+<div class="flex gap-4">
+</div>
+<p class="font-body-md text-body-md text-on-primary/80"># FARever. Crafted with Love.</p>
+</footer>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-surface/80 backdrop-blur-xl border-t border-secondary-container/30 rounded-t-full shadow-lg shadow-secondary/10">
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 transition-transform duration-200 active:scale-95 hover:opacity-100" href="home.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-lg text-label-lg">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary font-bold scale-110 transition-transform duration-200 active:scale-95" href="event.html">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-label-lg text-label-lg">Event</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 transition-transform duration-200 active:scale-95 hover:opacity-100" href="#gallery">
+<span class="material-symbols-outlined">photo_library</span>
+<span class="font-label-lg text-label-lg">Gallery</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 transition-transform duration-200 active:scale-95 hover:opacity-100" href="#rsvp">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-lg text-label-lg">RSVP</span>
+</a>
+</nav>
+<button
+class="fixed bottom-24 right-6 w-12 h-12 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-lg shadow-secondary/30 z-40 backdrop-blur-lg border border-white/20 active:scale-90 transition-all"
+id="musicToggle"
+onclick="handleMusicToggle()">
+
+   <span id="musicIcon"
+      class="material-symbols-outlined">
+    music_note
+</span>
+
+</button>
+<script>
+        // AOS Style Reveal & Scroll Animations
+        const reveals = document.querySelectorAll('.reveal, .slide-in-left, .slide-in-right');
+        const timelineLine = document.getElementById('timelineLine');
+        const storySection = document.getElementById('story');
+        const glassCards = document.querySelectorAll('.glass-card');
+        const footerParallax = document.querySelector('.footer-parallax');
+
+        const handleScroll = () => {
+            const windowHeight = window.innerHeight;
+            const scrollY = window.pageYOffset;
+
+            // Reveal elements
+            reveals.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                const elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    el.classList.add('active');
+                }
+            });
+
+            // Timeline Growth Animation
+            if (storySection) {
+                const rect = storySection.getBoundingClientRect();
+                const sectionTop = rect.top + scrollY;
+                const sectionHeight = rect.height;
+                const startPoint = sectionTop - (windowHeight / 2);
+                const progress = Math.max(0, Math.min(100, ((scrollY - startPoint) / (sectionHeight)) * 100));
+                timelineLine.style.height = `${progress}%`;
+            }
+
+            // Glassmorphism Blur Transition
+            glassCards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                if (rect.top < windowHeight * 0.8 && rect.bottom > windowHeight * 0.2) {
+                    card.classList.add('scrolled');
+                } else {
+                    card.classList.remove('scrolled');
+                }
+            });
+
+            // Footer Parallax
+            if (footerParallax) {
+                const footerRect = footerParallax.parentElement.getBoundingClientRect();
+                if (footerRect.top < windowHeight) {
+                    const offset = (windowHeight - footerRect.top) * 0.1;
+                    footerParallax.style.transform = `translateY(${offset}px)`;
+                }
+            }
+
+            // Parallax Ethnic Pattern
+            const pattern = document.querySelector('.ethnic-pattern');
+            if (pattern) {
+                pattern.style.backgroundPositionY = scrollY * 0.1 + 'px';
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', handleScroll);
+
+        // Lightbox Functionality
+        function openLightbox(element) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const src = element.querySelector('img').src;
+            lightboxImg.src = src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Copy to clipboard with animation
+        function copyToClipboard(text, toastId) {
+            navigator.clipboard.writeText(text).then(() => {
+                const toast = document.getElementById(toastId);
+                toast.classList.add('active');
+                setTimeout(() => {
+                    toast.classList.remove('active');
+                }, 2000);
+            });
+        }
+
+        // Smooth scroll for nav
+        document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId && targetId.startsWith('#')) {
+          e.preventDefault();
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+                
+                // Update active state (mobile)
+                document.querySelectorAll('nav a').forEach(a => {
+                    a.classList.remove('text-primary', 'font-bold', 'scale-110');
+                    a.classList.add('text-on-surface-variant', 'opacity-70');
+                });
+                this.classList.add('text-primary', 'font-bold', 'scale-110');
+                this.classList.remove('text-on-surface-variant', 'opacity-70');
+            });
+        });
+
+
+        const bgMusic = document.getElementById('bgMusic');
+        const musicIcon = document.getElementById('musicIcon');
+
+
+        let wasPlayingBeforeHidden = false;
+
+document.addEventListener('visibilitychange', () => {
+
+    if (document.hidden) {
+
+        // Simpan status sebelum tab ditinggal
+        wasPlayingBeforeHidden = !bgMusic.paused;
+
+        if (wasPlayingBeforeHidden) {
+            bgMusic.pause();
+        }
+
+    } else {
+
+        // Kalau sebelumnya memang lagi muter, lanjut lagi
+        if (wasPlayingBeforeHidden) {
+
+            bgMusic.play().catch(() => {});
+
+        }
+
+    }
+
+});
+
+if (document.hidden) {
+
+        wasPlayingBeforeHidden = !bgMusic.paused;
+
+        if (wasPlayingBeforeHidden) {
+
+            bgMusic.pause();
+
+            if (musicIcon) {
+                musicIcon.classList.remove('animate-spin-slow');
+            }
+
+        }
+
+    } else {
+
+        if (wasPlayingBeforeHidden) {
+
+            bgMusic.play().catch(() => {});
+
+            if (musicIcon) {
+                musicIcon.classList.add('animate-spin-slow');
+            }
+
+        }
+
+    }
+
+window.addEventListener('DOMContentLoaded', () => {
+
+    const savedTime =
+        parseFloat(sessionStorage.getItem('musicTime') || '0');
+
+    const isPlaying =
+        sessionStorage.getItem('musicPlaying') === 'true';
+
+    bgMusic.currentTime = savedTime;
+
+    if (isPlaying) {
+
+        bgMusic.play().catch(() => {});
+
+        if (musicIcon) {
+            musicIcon.classList.add('animate-spin-slow');
+        }
+
+    } else {
+
+        if (musicIcon) {
+            musicIcon.classList.remove('animate-spin-slow');
+        }
+
+    }
+
+});
+
+// Simpan posisi lagu
+setInterval(() => {
+
+    if (!bgMusic.paused) {
+
+        sessionStorage.setItem(
+            'musicTime',
+            bgMusic.currentTime
+        );
+
+    }
+
+}, 500);
+
+// Simpan saat pindah halaman
+window.addEventListener('beforeunload', () => {
+
+    sessionStorage.setItem(
+        'musicTime',
+        bgMusic.currentTime
+    );
+
+    sessionStorage.setItem(
+        'musicPlaying',
+        String(!bgMusic.paused)
+    );
+
+});
+
+// Tombol music
+function handleMusicToggle() {
+
+    if (bgMusic.paused) {
+
+        bgMusic.play();
+
+        sessionStorage.setItem(
+            'musicPlaying',
+            'true'
+        );
+
+        if (musicIcon) {
+            musicIcon.classList.add('animate-spin-slow');
+        }
+
+    } else {
+
+        bgMusic.pause();
+
+        sessionStorage.setItem(
+            'musicPlaying',
+            'false'
+        );
+
+        if (musicIcon) {
+            musicIcon.classList.remove('animate-spin-slow');
+        }
+
+    }
+
+}
+
+
+    </script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getFirestore, collection, addDoc, onSnapshot, orderBy, query, serverTimestamp }
+    from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  const app = initializeApp({
+    apiKey: "AIzaSyAxL-89lG8AgOhSgsWBAxPW-KPy5jBShwQ",
+    authDomain: "wedding-22110.firebaseapp.com",
+    projectId: "wedding-22110",
+    storageBucket: "wedding-22110.firebasestorage.app",
+    messagingSenderId: "358005479196",
+    appId: "1:358005479196:web:9088c050fe101641970cd9"
+  });
+  const db = getFirestore(app);
+  const col = collection(db, "wishes");
+
+  function esc(s) {
+    return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+  function timeAgo(ts) {
+    if (!ts) return "";
+    const d = Math.floor((Date.now() - ts.toMillis()) / 1000);
+    if (d < 60) return "Just now";
+    if (d < 3600) return Math.floor(d/60) + " min ago";
+    if (d < 86400) return Math.floor(d/3600) + " hr ago";
+    if (d < 172800) return "Yesterday";
+    return Math.floor(d/86400) + " days ago";
+  }
+
+  // Real-time wishes listener
+  onSnapshot(query(col, orderBy("createdAt","desc")), snap => {
+    const list = document.getElementById("wishes-list");
+    if (!list) return;
+    if (snap.empty) {
+      list.innerHTML = `<div class="text-center py-8 text-sm opacity-50">Be the first to leave a wish ✦</div>`;
+      return;
+    }
+    list.innerHTML = snap.docs.map((doc, i) => {
+      const d = doc.data();
+      return `
+        <div class="glass-card p-4 rounded-xl ${i===0 ? "border-l-4 border-secondary" : ""}">
+          <div class="flex justify-between items-start mb-2">
+            <span class="font-bold text-primary">${esc(d.name)}</span>
+            <span class="text-xs text-on-surface-variant">${timeAgo(d.createdAt)}</span>
+          </div>
+          ${d.attendance ? `<p class="text-xs text-on-surface-variant uppercase tracking-wide opacity-60 mb-1">${esc(d.attendance)}</p>` : ""}
+          ${d.message ? `<p class="text-body-md text-on-surface-variant italic">"${esc(d.message)}"</p>` : ""}
+        </div>`;
+    }).join("");
+  });
+
+  // RSVP submit → Formspree + simpan wish ke Firestore
+  document.getElementById("rsvp-form").addEventListener("submit", async e => {
+    e.preventDefault();
+    const btn = document.getElementById("rsvp-btn");
+    const msg = document.getElementById("rsvp-msg");
+    const name = document.getElementById("rsvp-name").value.trim();
+    const attendance = document.getElementById("rsvp-attendance").value;
+    const guests = document.getElementById("rsvp-guests").value;
+    const wish = document.getElementById("rsvp-wish").value.trim();
+
+    btn.disabled = true; btn.textContent = "Submitting...";
+
+    // Kirim ke Formspree
+    try {
+      const fd = new FormData(e.target);
+      const res = await fetch("https://formspree.io/f/xredvrjo", {
+        method: "POST", body: fd, headers: { Accept: "application/json" }
+      });
+      if (!res.ok) throw new Error();
+    } catch {
+      msg.textContent = "Gagal kirim, coba lagi.";
+      msg.className = "text-center text-sm text-red-400";
+      msg.classList.remove("hidden");
+      btn.disabled = false; btn.textContent = "Submit RSVP";
+      return;
+    }
+
+    // Simpan wish ke Firestore kalau ada
+    if (wish) {
+      await addDoc(col, { name, attendance, guests: Number(guests)||1, message: wish, createdAt: serverTimestamp() });
+    }
+
+    // Sukses
+    e.target.style.display = "none";
+    msg.textContent = attendance.includes("will attend")
+      ? `Yeay! Sampai jumpa, ${name}! 🎊`
+      : `Terima kasih, ${name}. Doamu sangat berarti 🤍`;
+    msg.className = "text-center text-sm";
+    msg.classList.remove("hidden");
+  });
+
+  // Toggle guest count
+  document.getElementById("rsvp-attendance").addEventListener("change", function() {
+    document.getElementById("guest-wrap").style.display =
+      this.value.includes("will attend") ? "block" : "none";
+  });
+
+  // Send wish standalone
+  window.sendWish = async function() {
+    const name = document.getElementById("wish-name").value.trim();
+    const text = document.getElementById("wish-text").value.trim();
+    const msg  = document.getElementById("wish-msg");
+    if (!name || !text) {
+      msg.textContent = "Isi nama dan ucapan dulu ya.";
+      msg.className = "text-sm mt-2 text-red-400";
+      msg.classList.remove("hidden"); return;
+    }
+    await addDoc(col, { name, message: text, createdAt: serverTimestamp() });
+    document.getElementById("wish-name").value = "";
+    document.getElementById("wish-text").value = "";
+    msg.textContent = "Ucapan terkirim ✦";
+    msg.className = "text-sm mt-2 text-green-600";
+    msg.classList.remove("hidden");
+    setTimeout(() => msg.classList.add("hidden"), 3000);
+  };
+</script>
+
+<style>
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 8s linear infinite;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #50071b;
+            border-radius: 10px;
+        }
+    </style>
+</body></html>

@@ -1,0 +1,525 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>A &amp; F Wedding - Event Details</title>
+<link rel="icon" type="image/png" sizes="192x192" href="images/logo.png">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#400011",
+                    "on-primary-container": "#f18795",
+                    "tertiary-container": "#3e3b36",
+                    "surface": "#fcf9f8",
+                    "on-tertiary-fixed": "#1e1b17",
+                    "surface-bright": "#fcf9f8",
+                    "inverse-surface": "#303030",
+                    "secondary-container": "#fed65b",
+                    "surface-container-high": "#eae7e7",
+                    "surface-container": "#f0eded",
+                    "surface-container-low": "#f6f3f2",
+                    "secondary-fixed": "#ffe088",
+                    "on-background": "#1b1c1c",
+                    "outline-variant": "#dac0c2",
+                    "primary": "#50071b",
+                    "surface-variant": "#e4e2e1",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-container": "#aaa59e",
+                    "on-tertiary-fixed-variant": "#4a4641",
+                    "tertiary-fixed-dim": "#ccc6be",
+                    "secondary-fixed-dim": "#e9c349",
+                    "primary-fixed-dim": "#ffb2bb",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#735c00",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed": "#241a00",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f3f0f0",
+                    "outline": "#877274",
+                    "tertiary-fixed": "#e8e1da",
+                    "on-surface": "#1b1c1c",
+                    "tertiary": "#282521",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#ffd9dc",
+                    "on-secondary-container": "#745c00",
+                    "error": "#ba1a1a",
+                    "background": "#fcf9f8",
+                    "surface-container-highest": "#e4e2e1",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#7c2a3a",
+                    "on-surface-variant": "#544244",
+                    "inverse-primary": "#ffb2bb",
+                    "on-secondary-fixed-variant": "#574500",
+                    "surface-tint": "#9a4150",
+                    "surface-dim": "#dcd9d9",
+                    "on-error": "#ffffff",
+                    "primary-container": "#6d1f2f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-padding-desktop": "80px",
+                    "section-gap": "64px",
+                    "base": "8px",
+                    "gutter": "16px",
+                    "container-padding-mobile": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "label-lg": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #fcf9f8;
+            background-image: 
+                radial-gradient(circle at 2px 2px, rgba(80, 7, 27, 0.03) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .glass-card {
+            background: rgba(252, 249, 248, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(115, 92, 0, 0.2);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .pattern-overlay {
+            mask-image: linear-gradient(to bottom, transparent, black, transparent);
+            opacity: 0.05;
+        }
+        .gold-glow {
+            box-shadow: 0 4px 20px -4px rgba(212, 175, 55, 0.3);
+        }
+        .reveal-hidden {
+            opacity: 0;
+            transform: translateY(32px);
+        }
+        .reveal-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @keyframes bounce-subtle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        .animate-icon-bounce {
+            animation: bounce-subtle 1s ease-out 0.5s 1;
+        }
+        .btn-gold-elevation {
+            transition: all 0.3s ease;
+        }
+        .btn-gold-elevation:hover, .btn-gold-elevation:active {
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
+            transform: translateY(-2px);
+        }
+
+        @keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin-slow {
+    animation: spin-slow 4s linear infinite;
+}
+
+    </style>
+<style data-stitch-css-vh="
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    ">
+    body {
+      min-height: max(884px, 884px);
+    }
+    </style>
+<body class="font-body-md text-on-surface overflow-x-hidden" data-mode="connect">
+    <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+    
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-gutter py-base bg-surface/50 dark:bg-surface-container/80 backdrop-blur-xl border-b border-secondary-container/30">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined"><br></span>
+</div>
+<h1 class="font-headline-md text-headline-md text-primary italic">A &amp; F Wedding</h1>
+<div class="flex items-center gap-2 text-primary">
+</div>
+</header>
+<main class="pt-24 pb-32 px-container-padding-mobile max-w-[600px] mx-auto min-h-[884px] relative" data-stitch-vh="min-h-[884px]===min-h-screen">
+<!-- Ethnic Background Decoration -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden pattern-overlay flex justify-center">
+<div class="w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/batik-pattern.png')]"></div>
+</div>
+<!-- Section Title -->
+<section class="text-center mb-section-gap relative z-10 reveal-visible">
+<span class="font-label-lg text-label-lg text-secondary uppercase tracking-widest mb-2 block">The Celebration</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-4">Event Information</h2>
+<div class="flex justify-center items-center gap-4">
+<div class="h-[1px] w-12 bg-secondary/30"></div>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<div class="h-[1px] w-12 bg-secondary/30"></div>
+</div>
+</section>
+<!-- Akad Nikah Section -->
+<section class="mb-gutter relative z-10 reveal-visible">
+<div class="glass-card rounded-xl p-8 text-center gold-glow transform transition-transform hover:scale-[1.01]">
+<div class="w-16 h-16 bg-primary/5 rounded-full flex items-center justify-center mx-auto mb-6 border border-secondary/20">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">diamond</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Akad Nikah</h3>
+<p class="font-label-lg text-label-lg text-secondary mb-6">THE SACRED VOWS</p>
+<div class="space-y-4 text-on-surface-variant">
+<div class="flex items-center justify-center gap-3">
+<span class="material-symbols-outlined text-secondary text-xl icon-to-animate animate-icon-bounce">calendar_today</span>
+<p class="font-body-md text-body-md">Friday, 03 July 2026</p>
+</div>
+<div class="flex items-center justify-center gap-3">
+<span class="material-symbols-outlined text-secondary text-xl icon-to-animate animate-icon-bounce">schedule</span>
+<p class="font-body-md text-body-md">16:30 AM</p>
+</div>
+<div class="flex flex-col items-center mt-6 pt-6 border-t border-secondary/10">
+<span class="material-symbols-outlined text-secondary mb-2 icon-to-animate animate-icon-bounce">location_on</span>
+<p class="font-body-lg text-body-lg font-semibold text-on-surface">Resto Boros Bomboe</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Jl. Insinyur H. Juanda No.81 Blok A 18-22, RT.002/RW.010, Duren Jaya, Bekasi Timur, Bekasi, West Java 17111</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Reception Section -->
+<section class="mb-section-gap relative z-10 reveal-visible">
+<div class="glass-card rounded-xl p-8 text-center gold-glow transform transition-transform hover:scale-[1.01]">
+<div class="w-16 h-16 bg-primary/5 rounded-full flex items-center justify-center mx-auto mb-6 border border-secondary/20">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">celebration</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Wedding Reception</h3>
+<p class="font-label-lg text-label-lg text-secondary mb-6">THE CELEBRATION</p>
+<div class="space-y-4 text-on-surface-variant">
+<div class="flex items-center justify-center gap-3">
+<span class="material-symbols-outlined text-secondary text-xl icon-to-animate animate-icon-bounce">calendar_today</span>
+<p class="font-body-md text-body-md">Friday, 03 July 2026</p>
+</div>
+<div class="flex items-center justify-center gap-3">
+<span class="material-symbols-outlined text-secondary text-xl icon-to-animate animate-icon-bounce">schedule</span>
+<p class="font-body-md text-body-md">17:00 AM - 19:30 PM</p>
+</div>
+<div class="flex flex-col items-center mt-6 pt-6 border-t border-secondary/10">
+<span class="material-symbols-outlined text-secondary mb-2 icon-to-animate animate-icon-bounce">location_on</span>
+<p class="font-body-lg text-body-lg font-semibold text-on-surface">Resto Boros Bomboe</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Jl. Insinyur H. Juanda No.81 Blok A 18-22, RT.002/RW.010, Duren Jaya, Bekasi Timur, Bekasi, West Java 17111</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Google Maps Section -->
+<section class="relative z-10 reveal-hidden">
+<div class="glass-card rounded-xl overflow-hidden gold-glow">
+<div class="h-64 w-full relative">
+<img class="w-full h-full object-cover grayscale-[20%] sepia-[20%]" data-alt="A sophisticated digital map visualization of Padang city in West Sumatra, rendered in a minimalist luxury aesthetic. The map features elegant gold and maroon markers on a clean, light cream-colored terrain, reflecting the wedding's royal color palette. The overall visual style is modern yet rooted in cultural elegance, with soft lighting and professional cartography details." data-location="Padang, West Sumatra" src="images/maps.png">
+<div class="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+</div>
+<div class="p-6 text-center">
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 italic">We look forward to celebrating this special day with you. Please use the button below for easy navigation to our venue.</p>
+<a class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label-lg text-label-lg px-8 py-4 rounded-lg active:scale-95 transition-all gold-glow btn-gold-elevation" href="https://www.google.com/maps?sca_esv=1a6a413ea15d13ff&biw=1280&bih=593&output=search&q=boros+boemboe&source=lnms&fbs=ADc_l-ZfIPzv45NHkpmEx1uvAy1YOCyuGSShVoj_GTJ0JKGnTwdBsd8ORv_SiQSe9cb02NuX-yrvtv0oNqcBTrq20TX4_Szx80ZpwsWNoe4r3_OJ5Y9pfmmDyCoJ4Nfuoqum-AYm1thQHmCdtAfT1S_jLhQlMYfFPHqC04UFs6aUFAt4F_d5WGB_j-NgpLk9fLOa5YMfjvTwNXDL8zKnmn9MP5-9oeS7_A&entry=mc&ved=1t:200715&ictx=111">
+<span class="material-symbols-outlined text-xl icon-to-animate">map</span>
+                    Buka Google Maps
+                </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-container-padding-mobile flex flex-col items-center text-center gap-gutter bg-primary text-on-primary border-t border-secondary-fixed/20 mb-20">
+<h2 class="font-headline-md text-headline-md text-secondary-container italic">A &amp; F</h2>
+<p class="font-body-md text-body-md opacity-80 max-w-[300px]">Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga, apabila Bapak/Ibu/Saudara/i berkenan hadir.</p>
+<div class="flex gap-4">
+</div>
+<p class="font-body-md text-body-md text-on-primary/80"># FARever. Crafted with Love.</p>
+</footer>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-surface/50 dark:bg-surface-container/80 backdrop-blur-xl border-t border-secondary-container/30 rounded-t-full shadow-lg shadow-secondary/10">
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 transition-transform duration-200 active:scale-95" href="home.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-lg text-label-lg">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary font-bold scale-110 transition-transform duration-200 active:scale-95" href="event.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="font-label-lg text-label-lg">Event</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 transition-transform duration-200 active:scale-95" href="story.html" onclick="goToStory(event)">
+<span class="material-symbols-outlined">photo_library</span>
+<span class="font-label-lg text-label-lg">Gallery</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 transition-transform duration-200 active:scale-95" href="story.html" onclick="goToStory(event)">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-lg text-label-lg">RSVP</span>
+</a>
+</nav>
+<!-- Music Player Toggle -->
+<div class="fixed bottom-24 right-4 z-40">
+<button id="musicToggle"
+class="w-12 h-12 bg-secondary text-on-secondary rounded-full flex items-center justify-center shadow-lg hover:bg-primary transition-colors glass-card ring-2 ring-secondary-fixed"
+onclick="handleMusicToggle()">
+
+<span id="musicIcon"
+      class="material-symbols-outlined">
+    music_note
+</span>
+
+</button>
+</div>
+<script>
+
+
+   function goToStory(event) {
+
+    event.preventDefault();
+
+    console.log(
+    'Sebelum pindah:',
+    bgMusic.paused,
+    bgMusic.currentTime
+);
+
+        sessionStorage.setItem(
+            'musicTime',
+            bgMusic.currentTime
+        );
+
+        sessionStorage.setItem(
+            'musicPlaying',
+            String(!bgMusic.paused)
+        );
+
+    
+
+    window.location.href = 'story.html';
+
+}
+
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove('reveal-hidden');
+                entry.target.classList.add('reveal-visible');
+                
+                // Trigger icon animations within the revealed section
+                const icons = entry.target.querySelectorAll('.icon-to-animate');
+                icons.forEach((icon, index) => {
+                    setTimeout(() => {
+                        icon.classList.add('animate-icon-bounce');
+                    }, index * 150);
+                });
+
+                // Optional: stop observing once revealed
+                // revealObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Apply observer to cards and sections
+    document.querySelectorAll('.reveal-hidden').forEach(el => {
+        revealObserver.observe(el);
+    });
+
+    // Handle button interaction for mobile (immediate feedback)
+    const gmapsBtn = document.querySelector('.btn-gold-elevation');
+    if (gmapsBtn) {
+        gmapsBtn.addEventListener('touchstart', () => {
+            gmapsBtn.classList.add('scale-95');
+        });
+        gmapsBtn.addEventListener('touchend', () => {
+            gmapsBtn.classList.remove('scale-95');
+        });
+    }
+    
+   
+const bgMusic = document.getElementById('bgMusic');
+const musicIcon = document.getElementById('musicIcon');
+
+let wasPlayingBeforeHidden = false;
+
+document.addEventListener('visibilitychange', () => {
+
+    if (document.hidden) {
+
+        // Simpan status sebelum tab ditinggal
+        wasPlayingBeforeHidden = !bgMusic.paused;
+
+        if (wasPlayingBeforeHidden) {
+            bgMusic.pause();
+        }
+
+    } else {
+
+        // Kalau sebelumnya memang lagi muter, lanjut lagi
+        if (wasPlayingBeforeHidden) {
+
+            bgMusic.play().catch(() => {});
+
+        }
+
+    }
+
+});
+
+if (document.hidden) {
+
+        wasPlayingBeforeHidden = !bgMusic.paused;
+
+        if (wasPlayingBeforeHidden) {
+
+            bgMusic.pause();
+
+            if (musicIcon) {
+                musicIcon.classList.remove('animate-spin-slow');
+            }
+
+        }
+
+    } else {
+
+        if (wasPlayingBeforeHidden) {
+
+            bgMusic.play().catch(() => {});
+
+            if (musicIcon) {
+                musicIcon.classList.add('animate-spin-slow');
+            }
+
+        }
+
+    }
+
+window.addEventListener('DOMContentLoaded', () => {
+
+    const savedTime =
+        parseFloat(sessionStorage.getItem('musicTime') || '0');
+
+    const isPlaying =
+        sessionStorage.getItem('musicPlaying') === 'true';
+
+    bgMusic.currentTime = savedTime;
+
+    if (isPlaying) {
+
+        bgMusic.play().catch(() => {});
+
+        if (musicIcon) {
+            musicIcon.classList.add('animate-spin-slow');
+        }
+
+    } else {
+
+        if (musicIcon) {
+            musicIcon.classList.remove('animate-spin-slow');
+        }
+
+    }
+
+});
+
+// Simpan posisi lagu
+setInterval(() => {
+
+    if (!bgMusic.paused) {
+
+        sessionStorage.setItem(
+            'musicTime',
+            bgMusic.currentTime
+        );
+
+    }
+
+}, 500);
+
+// Simpan saat pindah halaman
+window.addEventListener('beforeunload', () => {
+
+    sessionStorage.setItem(
+        'musicTime',
+        bgMusic.currentTime
+    );
+
+    sessionStorage.setItem(
+        'musicPlaying',
+        String(!bgMusic.paused)
+    );
+
+});
+
+// Tombol music
+function handleMusicToggle() {
+
+    if (bgMusic.paused) {
+
+        bgMusic.play();
+
+        sessionStorage.setItem(
+            'musicPlaying',
+            'true'
+        );
+
+        if (musicIcon) {
+            musicIcon.classList.add('animate-spin-slow');
+        }
+
+    } else {
+
+        bgMusic.pause();
+
+        sessionStorage.setItem(
+            'musicPlaying',
+            'false'
+        );
+
+        if (musicIcon) {
+            musicIcon.classList.remove('animate-spin-slow');
+        }
+
+    }
+
+}
+
+
+</script>
+</body>
+</html>
